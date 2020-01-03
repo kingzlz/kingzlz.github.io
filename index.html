@@ -53,9 +53,10 @@
         var minute = Math.floor((leftsecond - day1 * 24 * 60 * 60 - hour * 3600) / 60);
         // 剩余秒数（除去大单位后整数倍）
         var second = Math.floor(leftsecond - day1 * 24 * 60 * 60 - hour * 3600 - minute * 60);
+        second = +second > 9 ? second : '0'+ second;
 
         var cc = document.getElementById(divname);
-        cc.innerHTML =  year + "年" + month + "月" + day + "日还有：" + day1 + "天" + hour + "小时" + minute + "分" + second + "秒";
+        cc.innerHTML =  year + "年" + month + "月" + day + "日还有：" + day1 + " 天 " + hour + " 小时 " + minute + " 分 " + second + " 秒";
       }
 
       /**
