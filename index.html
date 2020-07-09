@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>hello</title>
 </head>
+
 <body>
-  <h1>距离宝宝出生<span id="birthday"></span></h1>
- <!--  <h2>双向数据绑定</h2>
+  <h1>宝宝出生<span id="birthday"></span></h1>
+  <!--  <h2>双向数据绑定</h2>
     <div id="app" style="padding: 20px;">
       <input type="text" id="txt">
       <p id="show"></p>
@@ -28,57 +30,66 @@
       obj.txt = e.target.value
     })
     var id;
-      var interval = 1000;
+    var interval = 1000;
+    var cc = document.getElementById('birthday');
+    /**
+     * @param year 结束日期的年
+     * @param month 结束日期的月
+     * @param day 结束日期的日
+     * @param divname 需做出响应的元素id
+     */
+    function ShowCountDown(year, month, day, divname) {
+      // 设置结束日期
+      var endDate = new Date(year, month - 1, day);
+      // 获取当前日期
+      var now = new Date();
+      // 计算剩余毫秒数
+      var leftTime = endDate.getTime() - now.getTime();
+      // 计算剩余秒数
+      var leftsecond = parseInt(leftTime / 1000);
+      // 剩余天数（整数倍）
+      var day1 = Math.floor(leftsecond / (60 * 60 * 24));
+      // 剩余小时数（除去大单位后整数倍）
+      var hour = Math.floor((leftsecond - day1 * 24 * 60 * 60) / 3600);
+      // 剩余分钟数（除去大单位后整数倍）
+      var minute = Math.floor((leftsecond - day1 * 24 * 60 * 60 - hour * 3600) / 60);
+      // 剩余秒数（除去大单位后整数倍）
+      var second = Math.floor(leftsecond - day1 * 24 * 60 * 60 - hour * 3600 - minute * 60);
+      second = +second > 9 ? second : '0' + second;
 
-      /**
-       * @param year 结束日期的年
-       * @param month 结束日期的月
-       * @param day 结束日期的日
-       * @param divname 需做出响应的元素id
-       */
-      function ShowCountDown(year, month, day, divname) {
-        // 设置结束日期
-        var endDate = new Date(year, month - 1, day);
-        // 获取当前日期
-        var now = new Date();
-        // 计算剩余毫秒数
-        var leftTime = endDate.getTime() - now.getTime();
-        // 计算剩余秒数
-        var leftsecond = parseInt(leftTime / 1000);
-        // 剩余天数（整数倍）
-        var day1 = Math.floor(leftsecond / (60 * 60 * 24));
-        // 剩余小时数（除去大单位后整数倍）
-        var hour = Math.floor((leftsecond - day1 * 24 * 60 * 60) / 3600);
-        // 剩余分钟数（除去大单位后整数倍）
-        var minute = Math.floor((leftsecond - day1 * 24 * 60 * 60 - hour * 3600) / 60);
-        // 剩余秒数（除去大单位后整数倍）
-        var second = Math.floor(leftsecond - day1 * 24 * 60 * 60 - hour * 3600 - minute * 60);
-        second = +second > 9 ? second : '0'+ second;
+      var cc = document.getElementById(divname);
+      cc.innerHTML = year + "年" + month + "月" + day + "日还有：" + day1 + " 天 " + hour + " 小时 " + minute + " 分 " + second +
+        " 秒";
+    }
 
-        var cc = document.getElementById(divname);
-        cc.innerHTML =  year + "年" + month + "月" + day + "日还有：" + day1 + " 天 " + hour + " 小时 " + minute + " 分 " + second + " 秒";
+    /**
+     * 开始倒计时
+     */
+    function start() {
+      id = window.setInterval(function () {
+
+        // ShowCountDown(2020, 5, 25, 'birthday');
+        getDaysDiffBetweenDates(new Date('2020-05-23'), new Date());
+
+      }, interval);
+    }
+
+    /**
+     * 停止倒计时
+     */
+    function stop() {
+      if (id) {
+        window.clearInterval(id);
       }
-
-      /**
-       * 开始倒计时
-       */
-      function start() {
-        id = window.setInterval(function () {
-
-          ShowCountDown(2020, 5, 25, 'birthday');
-
-        }, interval);
-      }
-
-      /**
-       * 停止倒计时
-       */
-      function stop() {
-        if (id) {
-          window.clearInterval(id);
-        }
-      }     
-      start();  
+    }
+    start();
+    // 获取两个日期相差天数 (getDaysDiffBetweenDates(new Date('2017-12-13'), new Date('2017-12-22')); // 9)
+    function getDaysDiffBetweenDates(dateInitial, dateFinal) {
+      var day = (dateFinal - dateInitial) / (1000 * 3600 * 24);
+      console.log(day)
+      cc.innerHTML =  Math.floor(day) + " 天了" ;
+    }
   </script>
 </body>
+
 </html>
