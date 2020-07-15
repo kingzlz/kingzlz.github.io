@@ -189,6 +189,116 @@
             
 
   
+    <article id="post-js-learn" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2020/07/15/js-learn/" target="_blank">js练习</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2020/07/15/js-learn/" class="archive-article-date">
+        <time datetime="2020-07-15T09:31:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-15</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h3 id="1-设计一个方法提取对象中所有value大于2的键值对并返回最新的对象"><a href="#1-设计一个方法提取对象中所有value大于2的键值对并返回最新的对象" class="headerlink" title="1.设计一个方法提取对象中所有value大于2的键值对并返回最新的对象"></a>1.设计一个方法提取对象中所有value大于2的键值对并返回最新的对象</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var obj &#x3D; &#123;a: 1, b: 3, c:4&#125;;</span><br><span class="line">foo(obj); &#x2F;&#x2F; &#123;b: 3, c: 4&#125;</span><br><span class="line"></span><br><span class="line">foo(obj) &#123;</span><br><span class="line">    return Object.fromEntries(</span><br><span class="line">      Object.entries(obj).filter(([key, value]) &#x3D;&gt; value &gt; 2)</span><br><span class="line">    )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="2-用正则写一个根据name获取cookie中的值的方法"><a href="#2-用正则写一个根据name获取cookie中的值的方法" class="headerlink" title="2.用正则写一个根据name获取cookie中的值的方法"></a>2.用正则写一个根据name获取cookie中的值的方法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function getCookie(name) &#123;</span><br><span class="line">  var match &#x3D; document.cookie.match(new RegExp(&#39;(^| )&#39; + name + &#39;&#x3D;([^;]*)&#39;));</span><br><span class="line">  if (match) return unescape(match[2]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>每个cookie都是由name=value这样的形式存储的</li>
+<li>每一项的开头可能是一个空串’ ‘,</li>
+<li>每一项都是用”;”来区分</li>
+<li>=([^;]*) 这里匹配的就是=后面的值,^要是放在[]里就表示”除了^后面的内容都能匹配”, 也就是非的意思,所以这里([^;]*)表示除了”;”这个字符串别的都匹配 0或多次</li>
+<li>最后match是一个长度为4的数据如[usrername=xxxx, ‘’, ‘xxxx’, ‘;’]</li>
+<li>为了防止获取到的值是%xx 这样的字符序列,需要用unescape()解法解码</li>
+</ul>
+<h3 id="3-实现一个拖拽写法"><a href="#3-实现一个拖拽写法" class="headerlink" title="3. 实现一个拖拽写法"></a>3. 实现一个拖拽写法</h3><ol>
+<li>event的兼容性<ul>
+<li>其它浏览器window.event</li>
+<li>火狐下没有window.event,所以用传入的参数ev代替</li>
+<li>最终写法: var Oevent = ev || window.event</li>
+</ul>
+</li>
+<li>实现拖拽的gkwre哪些(box为需要拖拽的元素)<ul>
+<li>box.onmousefown</li>
+<li>document.onmousemove</li>
+<li>document.onmouseup</li>
+</ul>
+</li>
+<li>实现的事件顺序<ul>
+<li>首先监听box.onmousedown, 即鼠标按下box时触发的事件,记录下鼠标按下时距离屏幕上边和左边的距离,以及box距离屏幕上边和左边的距离.再用前者减去后者得到的差值distanceX和distanceY</li>
+<li>然后在此事件中监听document.onmousemove事件,记录下每美次鼠标移动时距离屏幕上边和左边的距离,然后用它们减去distanceX,distanceY,再将其赋值给box的left和top.使其能跟着鼠标移动</li>
+<li>不过需要考虑box距离屏幕最上面/下面/左边/右边的边界情况</li>
+<li>当document.onmouseuo的时候需要将document.onmousemove事件设置为null</li>
+<li>如下图</li>
+</ul>
+</li>
+</ol>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/15/17351bfc2ddb4654?w=1280&h=791&f=png&s=71896" alt="事件图"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">style&#123;</span><br><span class="line">    html, body &#123;</span><br><span class="line">    margin: 0;</span><br><span class="line">    height: 100%;</span><br><span class="line">  &#125;</span><br><span class="line">  #box &#123;</span><br><span class="line">    width: 100px;</span><br><span class="line">    height: 100px;</span><br><span class="line">    background-color: red;</span><br><span class="line">    position: absolute;</span><br><span class="line">    top: 100px;</span><br><span class="line">    left: 100px;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="html"><a href="#html" class="headerlink" title="html"></a>html</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id&#x3D;&quot;box&quot;&gt;&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+<p>js:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">window.onload &#x3D; function () &#123;</span><br><span class="line">  var box &#x3D; document.getElementById(&#39;box&#39;);</span><br><span class="line">  box.onmousedown &#x3D; function (ev) &#123;</span><br><span class="line">    var oEvent &#x3D; ev || window.event; &#x2F;&#x2F; 兼容火狐,火狐下没有window.event</span><br><span class="line">    var distanceX &#x3D; oEvent.clientX - box.offsetLeft; &#x2F;&#x2F; 鼠标到可视区左边的距离 - box到页面左边的距离</span><br><span class="line">    var distanceY &#x3D; oEvent.clientY - box.offsetTop;</span><br><span class="line">    document.onmousemove &#x3D; function (ev) &#123;</span><br><span class="line">      var oEvent &#x3D; ev || window.event;</span><br><span class="line">      var left &#x3D; oEvent.clientX - distanceX;</span><br><span class="line">      var top &#x3D; oEvent.clientY - distanceY;</span><br><span class="line">      if (left &lt;&#x3D; 0) &#123;</span><br><span class="line">        left &#x3D; 0;</span><br><span class="line">      &#125; else if (left &gt;&#x3D; document.documentElement.clientWidth - box.offsetWidth) &#123;</span><br><span class="line">        left &#x3D; document.documentElement.clientWidth - box.offsetWidth;</span><br><span class="line">      &#125;</span><br><span class="line">      if (top &lt;&#x3D; 0) &#123;</span><br><span class="line">        top &#x3D; 0;</span><br><span class="line">      &#125; else if (top &gt;&#x3D; document.documentElement.clientHeight - box.offsetHeight) &#123;</span><br><span class="line">        top &#x3D; document.documentElement.clientHeight - box.offsetHeight;</span><br><span class="line">      &#125;</span><br><span class="line">      box.style.left &#x3D; left + &#39;px&#39;;</span><br><span class="line">      box.style.top &#x3D; top + &#39;px&#39;;</span><br><span class="line">    &#125;</span><br><span class="line">    document.onmouseup &#x3D; function () &#123;</span><br><span class="line">      document.onmousemove &#x3D; null;</span><br><span class="line">      document.onmouseup &#x3D; null;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2020/07/15/js-learn/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-resume" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -218,7 +328,8 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <h2 id="个人简历"><a href="#个人简历" class="headerlink" title="个人简历"></a>个人简历</h2>
+    <h2 id="个人简历"><a href="#个人简历" class="headerlink" title="个人简历"></a>个人简历</h2><p>大家好</p>
+
     
 
     
