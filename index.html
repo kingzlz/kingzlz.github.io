@@ -570,8 +570,8 @@
 <li>最终写法: var Oevent = ev || window.event</li>
 </ul>
 </li>
-<li>实现拖拽的gkwre哪些(box为需要拖拽的元素)<ul>
-<li>box.onmousefown</li>
+<li>实现拖拽的事件哪些(box为需要拖拽的元素)<ul>
+<li>box.onmousedown</li>
 <li>document.onmousemove</li>
 <li>document.onmouseup</li>
 </ul>
@@ -580,7 +580,7 @@
 <li>首先监听box.onmousedown, 即鼠标按下box时触发的事件,记录下鼠标按下时距离屏幕上边和左边的距离,以及box距离屏幕上边和左边的距离.再用前者减去后者得到的差值distanceX和distanceY</li>
 <li>然后在此事件中监听document.onmousemove事件,记录下每美次鼠标移动时距离屏幕上边和左边的距离,然后用它们减去distanceX,distanceY,再将其赋值给box的left和top.使其能跟着鼠标移动</li>
 <li>不过需要考虑box距离屏幕最上面/下面/左边/右边的边界情况</li>
-<li>当document.onmouseuo的时候需要将document.onmousemove事件设置为null</li>
+<li>当document.onmouseup的时候需要将document.onmousemove事件设置为null</li>
 <li>如下图</li>
 </ul>
 </li>
