@@ -218,12 +218,10 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <h4 id="Egg-js-是什么"><a href="#Egg-js-是什么" class="headerlink" title="Egg.js 是什么?"></a>Egg.js 是什么?</h4><h5 id="Egg-js-为企业级框架和应用而生，我们希望由-Egg-js-孕育出更多上层框架，帮助开发团队和开发人员降低开发和维护成本。"><a href="#Egg-js-为企业级框架和应用而生，我们希望由-Egg-js-孕育出更多上层框架，帮助开发团队和开发人员降低开发和维护成本。" class="headerlink" title="Egg.js 为企业级框架和应用而生，我们希望由 Egg.js 孕育出更多上层框架，帮助开发团队和开发人员降低开发和维护成本。"></a>Egg.js 为企业级框架和应用而生，我们希望由 Egg.js 孕育出更多上层框架，帮助开发团队和开发人员降低开发和维护成本。</h5><h4 id="设计原则"><a href="#设计原则" class="headerlink" title="设计原则"></a>设计原则</h4><p>我们深知企业级应用在追求规范和共建的同时，还需要考虑如何平衡不同团队之间的差异，求同存异。所以我们没有选择社区常见框架的大集市模式（集成如数据库、模板引擎、前端框架等功能），而是专注于提供 Web 开发的核心功能和一套灵活可扩展的插件机制。我们不会做出技术选型，因为固定的技术选型会使框架的扩展性变差，无法满足各种定制需求。通过 Egg，团队的架构师和技术负责人可以非常容易地基于自身的技术架构在 Egg 基础上扩展出适合自身业务场景的框架。</p>
-<p>Egg 的插件机制有很高的可扩展性，<code>一个插件只做一件事</code>（比如 Nunjucks 模板封装成了 egg-view-nunjucks、MySQL 数据库封装成了 egg-mysql）。Egg 通过框架聚合这些插件，并根据自己的业务场景定制配置，这样应用的开发成本就变得很低。</p>
-<p>Egg 奉行<code>『约定优于配置』</code>，按照一套统一的约定进行应用开发，团队内部采用这种方式可以减少开发人员的学习成本，开发人员不再是『钉子』，可以流动起来。没有约定的团队，沟通成本是非常高的，比如有人会按目录分栈而其他人按目录分功能，开发者认知不一致很容易犯错。但约定不等于扩展性差，相反 Egg 有很高的扩展性，可以按照团队的约定定制框架。使用 Loader 可以让框架根据不同环境定义默认配置，还可以覆盖 Egg 的默认约定。</p>
-<h4 id="与社区框架的差异"><a href="#与社区框架的差异" class="headerlink" title="与社区框架的差异"></a>与社区框架的差异</h4><p><code>Express</code> 是 Node.js 社区广泛使用的框架，简单且扩展性强，非常适合做个人项目。但框架本身缺少约定，标准的 MVC 模型会有各种千奇百怪的写法。Egg 按照约定进行开发，奉行『约定优于配置』，团队协作成本低。</p>
-<p><code>Sails</code> 是和 <code>Egg</code> 一样奉行<code>『约定优于配置』</code>的框架，扩展性也非常好。但是相比 Egg，Sails 支持 Blueprint REST API、WaterLine 这样可扩展的 ORM、前端集成、WebSocket 等，但这些功能都是由 Sails 提供的。而 Egg 不直接提供功能，只是集成各种功能插件，比如实现 egg-blueprint，egg-waterline 等这样的插件，再使用 sails-egg 框架整合这些插件就可以替代 Sails 了。</p>
-<h4 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h4><ul>
+    <h4 id="Egg-js-是什么"><a href="#Egg-js-是什么" class="headerlink" title="Egg.js 是什么?"></a>Egg.js 是什么?</h4><p>Egg.js 是<code>《阿里旗下产品》</code>基于 <code>Node.js</code> 和 <code>Koa</code> 是一个 Nodejs 的企业级应用开发框架。 可以帮助发团队和开发人员降低开发和维护成本。</p>
+<p>Express 和 Koa 是 Node.js 社区广泛使用的框架，简单且扩展性强，非常适合做个人项 目。但框架本身缺少约定，标准的 MVC 模型会有各种千奇百怪的写法。Egg.js 按照约定进行开发，奉行<code>『约定优于配置』</code>，团队协作成本低。</p>
+<p>Egg.js 基于 Es6、Es7 以及 Typescript、Koa2 使得 Nodejs 具有更规范的开发模式、更低 的学习成本、更优雅的代码、更少的开发成本、更少的维护成本。为企业级框架而生。</p>
+<h4 id="Egg-js的特性"><a href="#Egg-js的特性" class="headerlink" title="Egg.js的特性"></a>Egg.js的特性</h4><ul>
 <li>提供基于 Egg 定制上层框架的能力</li>
 <li>高度可扩展的插件机制</li>
 <li>内置多进程管理</li>
@@ -240,8 +238,6 @@
 <li>一、目录结构<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"> egg-project</span><br><span class="line">├── package.json</span><br><span class="line">├── app.js (可选)</span><br><span class="line">├── agent.js (可选)</span><br><span class="line">├── app</span><br><span class="line">│   ├── router.js		 	&#x2F;&#x2F; 路由设置</span><br><span class="line">│   ├── controller		 	&#x2F;&#x2F; 控制器</span><br><span class="line">│        └── home.js</span><br><span class="line">│   ├── service (可选)	 	&#x2F;&#x2F; 服务</span><br><span class="line">│        └── user.js</span><br><span class="line">│   ├── middleware (可选)		&#x2F;&#x2F; 中间件</span><br><span class="line">│        └── response_time.js</span><br><span class="line">│   ├── schedule (可选)		&#x2F;&#x2F; 用于定时任务</span><br><span class="line">│        └── my_task.js</span><br><span class="line">│   ├── public (可选)			&#x2F;&#x2F; 静态资源文件</span><br><span class="line">│        └── reset.css</span><br><span class="line">│   ├── view (可选)			&#x2F;&#x2F; 模板视图</span><br><span class="line">│        └── home.tpl</span><br><span class="line">│   └── extend (可选)			&#x2F;&#x2F; 集成功能小插件</span><br><span class="line">│       ├── helper.js (可选)</span><br><span class="line">│       ├── request.js (可选)</span><br><span class="line">│       ├── response.js (可选)</span><br><span class="line">│       ├── context.js (可选)</span><br><span class="line">│       ├── application.js (可选)</span><br><span class="line">│       └── agent.js (可选)</span><br><span class="line">├── config					&#x2F;&#x2F; 必要的核心配置</span><br><span class="line">│   ├── plugin.js			&#x2F;&#x2F; 插件配置</span><br><span class="line">│   ├── config.default.js	&#x2F;&#x2F; 默认基础配置</span><br><span class="line">│   ├── config.prod.js		&#x2F;&#x2F; 生产环境</span><br><span class="line">│   ├── config.test.js (可选)	&#x2F;&#x2F; 测试配置</span><br><span class="line">│   ├── config.local.js (可选)	&#x2F;&#x2F; 本地配置</span><br><span class="line">│   └── config.unittest.js (可选)	&#x2F;&#x2F; 待定</span><br><span class="line">└── test						&#x2F;&#x2F; 测试需要</span><br><span class="line">    ├── middleware</span><br><span class="line">        └── response_time.test.js</span><br><span class="line">    └── controller</span><br><span class="line">        └── home.test.js</span><br></pre></td></tr></table></figure>
 <h5 id="其中"><a href="#其中" class="headerlink" title="其中:"></a>其中:</h5></li>
 </ul>
-</li>
-</ul>
 <ul>
 <li>app/router.js 用于配置 URL 路由规则</li>
 <li>app/controller/** 用于解析用户的输入，处理后返回相应的结果</li>
@@ -253,6 +249,8 @@
 <li>config/plugin.js 用于配置需要加载的插件</li>
 <li>test/** 用于单元测试</li>
 <li>app.js 和 agent.js 用于自定义启动时的初始化工作</li>
+</ul>
+</li>
 </ul>
 <h4 id="1-2-内置对象"><a href="#1-2-内置对象" class="headerlink" title="1.2 内置对象"></a>1.2 内置对象</h4><p>我们在看 egg 的内置对象的时候,包括从 Koa 继承而来的 4 个对象<code>（Application, Context, Request, Response)</code> 以及框架扩展的一些对象<code>（Controller, Service, Helper, Config, Logger）</code></p>
 <ul>
