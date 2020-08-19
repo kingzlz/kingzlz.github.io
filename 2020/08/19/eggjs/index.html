@@ -10,20 +10,20 @@
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="####Egg.js 是什么? Egg.js 为企业级框架和应用而生，我们希望由 Egg.js 孕育出更多上层框架，帮助开发团队和开发人员降低开发和维护成本。设计原则我们深知企业级应用在追求规范和共建的同时，还需要考虑如何平衡不同团队之间的差异，求同存异。所以我们没有选择社区常见框架的大集市模式（集成如数据库、模板引擎、前端框架等功能），而是专注于提供 Web 开发的核心功能和一套灵活可扩展的插件">
+  <meta name="description" content="Egg.js 是什么?Egg.js 为企业级框架和应用而生，我们希望由 Egg.js 孕育出更多上层框架，帮助开发团队和开发人员降低开发和维护成本。设计原则我们深知企业级应用在追求规范和共建的同时，还需要考虑如何平衡不同团队之间的差异，求同存异。所以我们没有选择社区常见框架的大集市模式（集成如数据库、模板引擎、前端框架等功能），而是专注于提供 Web 开发的核心功能和一套灵活可扩展的插件机制。我们">
 <meta property="og:type" content="article">
 <meta property="og:title" content="简单学习Egg.js">
 <meta property="og:url" content="http://kingzlz.github.io/2020/08/19/eggjs/index.html">
 <meta property="og:site_name" content="zivenZhang&#39;s Blogs">
-<meta property="og:description" content="####Egg.js 是什么? Egg.js 为企业级框架和应用而生，我们希望由 Egg.js 孕育出更多上层框架，帮助开发团队和开发人员降低开发和维护成本。设计原则我们深知企业级应用在追求规范和共建的同时，还需要考虑如何平衡不同团队之间的差异，求同存异。所以我们没有选择社区常见框架的大集市模式（集成如数据库、模板引擎、前端框架等功能），而是专注于提供 Web 开发的核心功能和一套灵活可扩展的插件">
-<meta property="og:image" content="http://kingzlz.github.io/public/img/middleware.png">
-<meta property="og:image" content="http://kingzlz.github.io/public/img/middleware.gif">
-<meta property="og:image" content="http://kingzlz.github.io/public/img/router.png">
+<meta property="og:description" content="Egg.js 是什么?Egg.js 为企业级框架和应用而生，我们希望由 Egg.js 孕育出更多上层框架，帮助开发团队和开发人员降低开发和维护成本。设计原则我们深知企业级应用在追求规范和共建的同时，还需要考虑如何平衡不同团队之间的差异，求同存异。所以我们没有选择社区常见框架的大集市模式（集成如数据库、模板引擎、前端框架等功能），而是专注于提供 Web 开发的核心功能和一套灵活可扩展的插件机制。我们">
+<meta property="og:image" content="http://kingzlz.github.io/img/middleware.png">
+<meta property="og:image" content="http://kingzlz.github.io/img/middleware.gif">
+<meta property="og:image" content="http://kingzlz.github.io/img/router.png">
 <meta property="article:published_time" content="2020-08-19T02:24:39.000Z">
-<meta property="article:modified_time" content="2020-08-19T03:40:28.566Z">
+<meta property="article:modified_time" content="2020-08-19T03:52:13.954Z">
 <meta property="article:author" content="zivenZhang">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://kingzlz.github.io/public/img/middleware.png">
+<meta name="twitter:image" content="http://kingzlz.github.io/img/middleware.png">
   
     <link rel="alternative" href="/atom.xml" title="zivenZhang&#39;s Blogs" type="application/atom+xml">
   
@@ -243,8 +243,7 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p>####Egg.js 是什么?</p>
-<h5 id="Egg-js-为企业级框架和应用而生，我们希望由-Egg-js-孕育出更多上层框架，帮助开发团队和开发人员降低开发和维护成本。"><a href="#Egg-js-为企业级框架和应用而生，我们希望由-Egg-js-孕育出更多上层框架，帮助开发团队和开发人员降低开发和维护成本。" class="headerlink" title="Egg.js 为企业级框架和应用而生，我们希望由 Egg.js 孕育出更多上层框架，帮助开发团队和开发人员降低开发和维护成本。"></a>Egg.js 为企业级框架和应用而生，我们希望由 Egg.js 孕育出更多上层框架，帮助开发团队和开发人员降低开发和维护成本。</h5><h4 id="设计原则"><a href="#设计原则" class="headerlink" title="设计原则"></a>设计原则</h4><p>我们深知企业级应用在追求规范和共建的同时，还需要考虑如何平衡不同团队之间的差异，求同存异。所以我们没有选择社区常见框架的大集市模式（集成如数据库、模板引擎、前端框架等功能），而是专注于提供 Web 开发的核心功能和一套灵活可扩展的插件机制。我们不会做出技术选型，因为固定的技术选型会使框架的扩展性变差，无法满足各种定制需求。通过 Egg，团队的架构师和技术负责人可以非常容易地基于自身的技术架构在 Egg 基础上扩展出适合自身业务场景的框架。</p>
+    <h4 id="Egg-js-是什么"><a href="#Egg-js-是什么" class="headerlink" title="Egg.js 是什么?"></a>Egg.js 是什么?</h4><h5 id="Egg-js-为企业级框架和应用而生，我们希望由-Egg-js-孕育出更多上层框架，帮助开发团队和开发人员降低开发和维护成本。"><a href="#Egg-js-为企业级框架和应用而生，我们希望由-Egg-js-孕育出更多上层框架，帮助开发团队和开发人员降低开发和维护成本。" class="headerlink" title="Egg.js 为企业级框架和应用而生，我们希望由 Egg.js 孕育出更多上层框架，帮助开发团队和开发人员降低开发和维护成本。"></a>Egg.js 为企业级框架和应用而生，我们希望由 Egg.js 孕育出更多上层框架，帮助开发团队和开发人员降低开发和维护成本。</h5><h4 id="设计原则"><a href="#设计原则" class="headerlink" title="设计原则"></a>设计原则</h4><p>我们深知企业级应用在追求规范和共建的同时，还需要考虑如何平衡不同团队之间的差异，求同存异。所以我们没有选择社区常见框架的大集市模式（集成如数据库、模板引擎、前端框架等功能），而是专注于提供 Web 开发的核心功能和一套灵活可扩展的插件机制。我们不会做出技术选型，因为固定的技术选型会使框架的扩展性变差，无法满足各种定制需求。通过 Egg，团队的架构师和技术负责人可以非常容易地基于自身的技术架构在 Egg 基础上扩展出适合自身业务场景的框架。</p>
 <p>Egg 的插件机制有很高的可扩展性，<code>一个插件只做一件事</code>（比如 Nunjucks 模板封装成了 egg-view-nunjucks、MySQL 数据库封装成了 egg-mysql）。Egg 通过框架聚合这些插件，并根据自己的业务场景定制配置，这样应用的开发成本就变得很低。</p>
 <p>Egg 奉行<code>『约定优于配置』</code>，按照一套统一的约定进行应用开发，团队内部采用这种方式可以减少开发人员的学习成本，开发人员不再是『钉子』，可以流动起来。没有约定的团队，沟通成本是非常高的，比如有人会按目录分栈而其他人按目录分功能，开发者认知不一致很容易犯错。但约定不等于扩展性差，相反 Egg 有很高的扩展性，可以按照团队的约定定制框架。使用 Loader 可以让框架根据不同环境定义默认配置，还可以覆盖 Egg 的默认约定。</p>
 <h4 id="与社区框架的差异"><a href="#与社区框架的差异" class="headerlink" title="与社区框架的差异"></a>与社区框架的差异</h4><p><code>Express</code> 是 Node.js 社区广泛使用的框架，简单且扩展性强，非常适合做个人项目。但框架本身缺少约定，标准的 MVC 模型会有各种千奇百怪的写法。Egg 按照约定进行开发，奉行『约定优于配置』，团队协作成本低。</p>
@@ -255,9 +254,9 @@
 <li>内置多进程管理</li>
 <li>基于 <code>Koa</code> 开发，性能优异</li>
 <li>框架稳定，测试覆盖率高</li>
-<li>渐进式开发<br>###目录<h4 id="1-基础功能"><a href="#1-基础功能" class="headerlink" title="1.基础功能"></a>1.基础功能</h4></li>
+<li>渐进式开发<h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3></li>
 </ul>
-<ul>
+<h4 id="1-基础功能"><a href="#1-基础功能" class="headerlink" title="1.基础功能"></a>1.基础功能</h4><ul>
 <li>了解目录结构之前,我们需要对MVC的编程模式进行一个理解</li>
 <li>M =&gt; Model（模型） 是处理应用程序数据逻辑的部分，主要是和数据库打交道。</li>
 <li>V =&gt; View（视图） 是作为视图展示使用，如果没有这部分的需求的化， view 这一个层面的内容是可以被省略的。</li>
@@ -278,45 +277,37 @@
 <li>config/config.{env}.js 用于编写配置文件</li>
 <li>config/plugin.js 用于配置需要加载的插件</li>
 <li>test/** 用于单元测试</li>
-<li>app.js 和 agent.js 用于自定义启动时的初始化工作<h4 id="1-2-内置对象"><a href="#1-2-内置对象" class="headerlink" title="1.2 内置对象"></a>1.2 内置对象</h4>我们在看 egg 的内置对象的时候,包括从 Koa 继承而来的 4 个对象<code>（Application, Context, Request, Response)</code> 以及框架扩展的一些对象<code>（Controller, Service, Helper, Config, Logger）</code></li>
+<li>app.js 和 agent.js 用于自定义启动时的初始化工作</li>
 </ul>
+<h4 id="1-2-内置对象"><a href="#1-2-内置对象" class="headerlink" title="1.2 内置对象"></a>1.2 内置对象</h4><p>我们在看 egg 的内置对象的时候,包括从 Koa 继承而来的 4 个对象<code>（Application, Context, Request, Response)</code> 以及框架扩展的一些对象<code>（Controller, Service, Helper, Config, Logger）</code></p>
 <ul>
-<li><h4 id="1-2-1、Application"><a href="#1-2-1、Application" class="headerlink" title="1.2.1、Application"></a>1.2.1、Application</h4><p>Application 是一个全局对象，上面挂载了这个框架常用到的 全局方法和对象</p>
-</li>
-<li><h4 id="1-2-2、Context"><a href="#1-2-2、Context" class="headerlink" title="1.2.2、Context"></a>1.2.2、Context</h4><p>Context 是一个请求级别的对象，最常见的 Context 实例获取方式是在 Middleware, Controller 以及 Service 中，例如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; controller</span><br><span class="line">  class HomeController extends Controller &#123;</span><br><span class="line">      async index() &#123;</span><br><span class="line">          const &#123; ctx &#125; &#x3D; this;</span><br><span class="line">          ctx.body &#x3D; &#39;hi, egg, ss&#39;;</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></li>
-<li><h4 id="1-2-3、Request"><a href="#1-2-3、Request" class="headerlink" title="1.2.3、Request"></a>1.2.3、Request</h4><p>Request 是一个请求级别的对象，继承自 Koa.Request。封装了 Node.js 原生的 HTTP Request 对象，提供了一系列辅助方法获取 HTTP 请求常用参数。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; app&#x2F;controller&#x2F;user.js</span><br><span class="line">  class UserController extends Controller &#123;</span><br><span class="line">      async fetch() &#123;</span><br><span class="line">          const &#123; app, ctx &#125; &#x3D; this;</span><br><span class="line">          const id &#x3D; ctx.request.query.id;</span><br><span class="line">          ctx.response.body &#x3D; app.cache.get(id);</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-<p> ps: 需要注意的是，获取 POST 的 body 应该使用 ctx.request.body，而不是 ctx.body. 所以我们在获取 请求对应参数的时候均采用 ctx.request.query 或者 ctx.request.body 的方式.</p>
-</li>
-<li><h4 id="1-2-4、Response"><a href="#1-2-4、Response" class="headerlink" title="1.2.4、Response"></a>1.2.4、Response</h4><p>Response 是一个请求级别的对象，继承自 Koa.Response。封装了 Node.js 原生的 HTTP Response 对象，提供了一系列辅助方法设置 HTTP 响应</p>
-</li>
-<li><h4 id="1-2-5、Controller"><a href="#1-2-5、Controller" class="headerlink" title="1.2.5、Controller"></a>1.2.5、Controller</h4><p>框架提供了一个 Controller 基类，这个基类包括了一些常用的属性： ctx、app、config、service、logger 等</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">class UserController extends Controller &#123;</span><br><span class="line">  async index() &#123;</span><br><span class="line">     const &#123; ctx, app, config, service, logger &#125; &#x3D; this;</span><br><span class="line">     ctx.body &#x3D; &#39;test&#39;;</span><br><span class="line">  &#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure></li>
-<li><h4 id="1-2-6、Service"><a href="#1-2-6、Service" class="headerlink" title="1.2.6、Service"></a>1.2.6、Service</h4><p>框架提供了一个 Service 基类， Service 基类的属性和 Controller 基类属性一致，访问方式也类似</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">const Service &#x3D; require(&#39;egg&#39;).Service;</span><br><span class="line">class TestService extends Service &#123;</span><br><span class="line">    index() &#123;</span><br><span class="line">        const &#123; ctx &#125; &#x3D; this;</span><br><span class="line">        return ctx.request.query;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">module.exports &#x3D; TestService;</span><br></pre></td></tr></table></figure></li>
-<li><h4 id="1-2-7、Helper"><a href="#1-2-7、Helper" class="headerlink" title="1.2.7、Helper"></a>1.2.7、Helper</h4><p>Helper 用来提供一些实用的 utility 函数 ( 工具函数 ) ，可以在 Context 的实例上获取到当前请求的 Helper(ctx.helper) 实例。 其中我们还可以自定义 helper 方法，如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; app&#x2F;extend&#x2F;helper.js</span><br><span class="line">  module.exports &#x3D; &#123;</span><br><span class="line">      upperCase(str) &#123;</span><br><span class="line">          return str.toUpperCase();</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;;</span><br><span class="line">  在Controller直接使用ctx.helper.upperCase(&#39;string&#39;)</span><br></pre></td></tr></table></figure></li>
-<li><h4 id="1-2-8、Config"><a href="#1-2-8、Config" class="headerlink" title="1.2.8、Config"></a>1.2.8、Config</h4><p>我们可以通过 app.config 从 Application 实例上获取到 config 对象，也可以在 Controller, Service, Helper 的实例上通过 this.config 获取到 config 对象。 被创建出来的原则就是希望，配置和代码分离的原则。</p>
-</li>
-<li><h4 id="1-2-9、Logger"><a href="#1-2-9、Logger" class="headerlink" title="1.2.9、Logger"></a>1.2.9、Logger</h4><p>日志系统包含了 四大层面的 日志对象， 分别是 App Logger、App CoreLogger、Context Logger、Context CoreLogger、Controller Logger &amp; Service Logger<br>这些从 app、context 、logger、service 等各个层面都提供对应的 debug 方法，这些方法中包括</p>
-<ul>
+<li><h4 id="1-2-1、Application"><a href="#1-2-1、Application" class="headerlink" title="1.2.1、Application"></a>1.2.1、Application</h4>Application 是一个全局对象，上面挂载了这个框架常用到的 全局方法和对象</li>
+<li><h4 id="1-2-2、Context"><a href="#1-2-2、Context" class="headerlink" title="1.2.2、Context"></a>1.2.2、Context</h4>Context 是一个请求级别的对象，最常见的 Context 实例获取方式是在 Middleware, Controller 以及 Service 中，例如：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; controller</span><br><span class="line">  class HomeController extends Controller &#123;</span><br><span class="line">      async index() &#123;</span><br><span class="line">          const &#123; ctx &#125; &#x3D; this;</span><br><span class="line">          ctx.body &#x3D; &#39;hi, egg, ss&#39;;</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></li>
+<li><h4 id="1-2-3、Request"><a href="#1-2-3、Request" class="headerlink" title="1.2.3、Request"></a>1.2.3、Request</h4>Request 是一个请求级别的对象，继承自 Koa.Request。封装了 Node.js 原生的 HTTP Request 对象，提供了一系列辅助方法获取 HTTP 请求常用参数。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; app&#x2F;controller&#x2F;user.js</span><br><span class="line">  class UserController extends Controller &#123;</span><br><span class="line">      async fetch() &#123;</span><br><span class="line">          const &#123; app, ctx &#125; &#x3D; this;</span><br><span class="line">          const id &#x3D; ctx.request.query.id;</span><br><span class="line">          ctx.response.body &#x3D; app.cache.get(id);</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+ ps: 需要注意的是，获取 POST 的 body 应该使用 ctx.request.body，而不是 ctx.body. 所以我们在获取 请求对应参数的时候均采用 ctx.request.query 或者 ctx.request.body 的方式.</li>
+<li><h4 id="1-2-4、Response"><a href="#1-2-4、Response" class="headerlink" title="1.2.4、Response"></a>1.2.4、Response</h4>Response 是一个请求级别的对象，继承自 Koa.Response。封装了 Node.js 原生的 HTTP Response 对象，提供了一系列辅助方法设置 HTTP 响应</li>
+<li><h4 id="1-2-5、Controller"><a href="#1-2-5、Controller" class="headerlink" title="1.2.5、Controller"></a>1.2.5、Controller</h4>框架提供了一个 Controller 基类，这个基类包括了一些常用的属性： ctx、app、config、service、logger 等<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">class UserController extends Controller &#123;</span><br><span class="line">  async index() &#123;</span><br><span class="line">     const &#123; ctx, app, config, service, logger &#125; &#x3D; this;</span><br><span class="line">     ctx.body &#x3D; &#39;test&#39;;</span><br><span class="line">  &#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure></li>
+<li><h4 id="1-2-6、Service"><a href="#1-2-6、Service" class="headerlink" title="1.2.6、Service"></a>1.2.6、Service</h4>框架提供了一个 Service 基类， Service 基类的属性和 Controller 基类属性一致，访问方式也类似<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">const Service &#x3D; require(&#39;egg&#39;).Service;</span><br><span class="line">class TestService extends Service &#123;</span><br><span class="line">    index() &#123;</span><br><span class="line">        const &#123; ctx &#125; &#x3D; this;</span><br><span class="line">        return ctx.request.query;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">module.exports &#x3D; TestService;</span><br></pre></td></tr></table></figure></li>
+<li><h4 id="1-2-7、Helper"><a href="#1-2-7、Helper" class="headerlink" title="1.2.7、Helper"></a>1.2.7、Helper</h4>Helper 用来提供一些实用的 utility 函数 ( 工具函数 ) ，可以在 Context 的实例上获取到当前请求的 Helper(ctx.helper) 实例。 其中我们还可以自定义 helper 方法，如下：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; app&#x2F;extend&#x2F;helper.js</span><br><span class="line">  module.exports &#x3D; &#123;</span><br><span class="line">      upperCase(str) &#123;</span><br><span class="line">          return str.toUpperCase();</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;;</span><br><span class="line">  在Controller直接使用ctx.helper.upperCase(&#39;string&#39;)</span><br></pre></td></tr></table></figure></li>
+<li><h4 id="1-2-8、Config"><a href="#1-2-8、Config" class="headerlink" title="1.2.8、Config"></a>1.2.8、Config</h4>我们可以通过 app.config 从 Application 实例上获取到 config 对象，也可以在 Controller, Service, Helper 的实例上通过 this.config 获取到 config 对象。 被创建出来的原则就是希望，配置和代码分离的原则。</li>
+<li><h4 id="1-2-9、Logger"><a href="#1-2-9、Logger" class="headerlink" title="1.2.9、Logger"></a>1.2.9、Logger</h4>日志系统包含了 四大层面的 日志对象， 分别是 App Logger、App CoreLogger、Context Logger、Context CoreLogger、Controller Logger &amp; Service Logger<br>这些从 app、context 、logger、service 等各个层面都提供对应的 debug 方法，这些方法中包括<ul>
 <li>logger.debug()</li>
 <li>logger.info()</li>
 <li>logger.warn()</li>
-<li>logger.error()<h4 id="1-3、配置"><a href="#1-3、配置" class="headerlink" title="1.3、配置"></a>1.3、配置</h4>框架提供了强大且可扩展的配置功能，可以自动合并应用、插件、框架的配置，按顺序覆盖，且可以根据环境维护不同的配置。合并后的配置可直接从 app.config 获取。<br>配置文件：</li>
+<li>logger.error()</li>
 </ul>
 </li>
-<li><p>config.default.js —默认配置文件，一般也作为开发环境使用</p>
-</li>
-<li><p>config.prod.js — 生产环境配置文件，会覆盖默认配置文件的同名配置</p>
-</li>
-<li><p>config.unittest.js — 单元测试， 测试环境</p>
-</li>
-<li><p>config.local.js — 本地开发环境，额外于 默认配置。</p>
+</ul>
+<h4 id="1-3、配置"><a href="#1-3、配置" class="headerlink" title="1.3、配置"></a>1.3、配置</h4><p>  框架提供了强大且可扩展的配置功能，可以自动合并应用、插件、框架的配置，按顺序覆盖，且可以根据环境维护不同的配置。合并后的配置可直接从 app.config 获取。<br>  配置文件：</p>
+<ul>
+<li>config.default.js —默认配置文件，一般也作为开发环境使用</li>
+<li>config.prod.js — 生产环境配置文件，会覆盖默认配置文件的同名配置</li>
+<li>config.unittest.js — 单元测试， 测试环境</li>
+<li>config.local.js — 本地开发环境，额外于 默认配置。</li>
+</ul>
 <h4 id="1-4、中间件"><a href="#1-4、中间件" class="headerlink" title="1.4、中间件"></a>1.4、中间件</h4><ul>
 <li><h5 id="什么是中间件"><a href="#什么是中间件" class="headerlink" title="什么是中间件?"></a>什么是中间件?</h5><p>是一个函数,他可以访问请求对象（request object(req)）,响应对象（response object(res)）和web应用中处于请求-响应循环</p>
-<p>Express可以使用如下几种中间件：</p>
+<p> Express可以使用如下几种中间件：</p>
 <ul>
 <li>应用级中间件</li>
 <li>路由级中间件</li>
@@ -326,14 +317,13 @@
 </ul>
 </li>
 <li><h5 id="Koa-和-Express-的设计风格非常类似，底层也都是共用的同一套-HTTP-基础库，但是有几个显著的区别，主要的特点还有下面几个。"><a href="#Koa-和-Express-的设计风格非常类似，底层也都是共用的同一套-HTTP-基础库，但是有几个显著的区别，主要的特点还有下面几个。" class="headerlink" title="Koa 和 Express 的设计风格非常类似，底层也都是共用的同一套 HTTP 基础库，但是有几个显著的区别，主要的特点还有下面几个。"></a>Koa 和 Express 的设计风格非常类似，底层也都是共用的同一套 HTTP 基础库，但是有几个显著的区别，主要的特点还有下面几个。</h5><ul>
-<li><h6 id="Middleware"><a href="#Middleware" class="headerlink" title="Middleware"></a>Middleware</h6>  Koa 的中间件和 Express 不同，Koa 选择了洋葱圈模型。<br>  <img src="/public/img/middleware.png" alt="blockchain"></li>
-<li><h6 id="中间件执行顺序图"><a href="#中间件执行顺序图" class="headerlink" title="中间件执行顺序图"></a>中间件执行顺序图</h6>   <img src="/public/img/middleware.gif" alt="blockchain"><br>   所有的请求经过一个中间件的时候都会执行两次，对比 Express 形式的中间件，Koa 的模型可以非常方便的实现后置处理逻辑，对比 Koa 和 Express 的 Compress 中间件就可以明显的感受到 Koa 中间件模型的优势。</li>
+<li><h6 id="Middleware"><a href="#Middleware" class="headerlink" title="Middleware"></a>Middleware</h6>  Koa 的中间件和 Express 不同，Koa 选择了洋葱圈模型。<br>  <img src="/img/middleware.png" alt="blockchain"></li>
+<li><h6 id="中间件执行顺序图"><a href="#中间件执行顺序图" class="headerlink" title="中间件执行顺序图"></a>中间件执行顺序图</h6>   <img src="/img/middleware.gif" alt="blockchain"><br>   所有的请求经过一个中间件的时候都会执行两次，对比 Express 形式的中间件，Koa 的模型可以非常方便的实现后置处理逻辑，对比 Koa 和 Express 的 Compress 中间件就可以明显的感受到 Koa 中间件模型的优势。</li>
 </ul>
 </li>
 </ul>
-</li>
-<li><h4 id="1-4-1、如何编写中间件"><a href="#1-4-1、如何编写中间件" class="headerlink" title="1.4.1、如何编写中间件"></a>1.4.1、如何编写中间件</h4><p>从文件夹规则来说，我们编写的自己的中间件一般都会放在 app／middleware／ xxx.js 具体的 Demo 如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#x2F; egg 的中间件</span><br><span class="line"> &#x2F;&#x2F; 基于 洋葱圈模型</span><br><span class="line"> &#x2F;&#x2F; 和 koa 的中间件的构成差不多，只不过 egg 在外面包裹了一层</span><br><span class="line"> module.exports &#x3D; options &#x3D;&gt; &#123;</span><br><span class="line">     return async function toLowerCase(ctx, next) &#123;</span><br><span class="line">         await next();</span><br><span class="line">         const result &#x3D; ctx.request.query;</span><br><span class="line">         ctx.body &#x3D; result;</span><br><span class="line">     &#125;;</span><br><span class="line"> &#125;;</span><br></pre></td></tr></table></figure></li>
+<ul>
+<li><h4 id="1-4-1、如何编写中间件"><a href="#1-4-1、如何编写中间件" class="headerlink" title="1.4.1、如何编写中间件"></a>1.4.1、如何编写中间件</h4>从文件夹规则来说，我们编写的自己的中间件一般都会放在 app／middleware／ xxx.js 具体的 Demo 如下：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#x2F; egg 的中间件</span><br><span class="line"> &#x2F;&#x2F; 基于 洋葱圈模型</span><br><span class="line"> &#x2F;&#x2F; 和 koa 的中间件的构成差不多，只不过 egg 在外面包裹了一层</span><br><span class="line"> module.exports &#x3D; options &#x3D;&gt; &#123;</span><br><span class="line">     return async function toLowerCase(ctx, next) &#123;</span><br><span class="line">         await next();</span><br><span class="line">         const result &#x3D; ctx.request.query;</span><br><span class="line">         ctx.body &#x3D; result;</span><br><span class="line">     &#125;;</span><br><span class="line"> &#125;;</span><br></pre></td></tr></table></figure></li>
 <li><h4 id="1-4-2、如何使用中间件"><a href="#1-4-2、如何使用中间件" class="headerlink" title="1.4.2、如何使用中间件"></a>1.4.2、如何使用中间件</h4><ul>
 <li>在应用中使用中间件(全局)<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; config.default.js</span><br><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">    &#x2F;&#x2F; 配置需要的中间件，数组顺序即为中间件的加载顺序</span><br><span class="line">    middleware: [ &#39;gzip&#39; ],</span><br><span class="line">    &#x2F;&#x2F; 配置 gzip 中间件的配置</span><br><span class="line">    gzip: &#123;</span><br><span class="line">        threshold: 1024, &#x2F;&#x2F; 小于 1k 的响应体不压缩</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></li>
 <li>在框架和插件中使用中间件<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; app.js</span><br><span class="line">module.exports &#x3D; app &#x3D;&gt; &#123;</span><br><span class="line">    &#x2F;&#x2F; 在中间件最前面统计请求时间</span><br><span class="line">    app.config.coreMiddleware.unshift(&#39;report&#39;);</span><br><span class="line">    &#125;;</span><br><span class="line">    &#x2F;&#x2F; app&#x2F;middleware&#x2F;report.js</span><br><span class="line">    module.exports &#x3D; () &#x3D;&gt; &#123;</span><br><span class="line">    return async function (ctx, next) &#123;</span><br><span class="line">        const startTime &#x3D; Date.now();</span><br><span class="line">        await next();</span><br><span class="line">        &#x2F;&#x2F; 上报请求时间</span><br><span class="line">        reportTime(Date.now() - startTime);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line">&#x2F;&#x2F;  核心方法是 app.config.coreMiddleware.unshift(&#39;report&#39;)</span><br></pre></td></tr></table></figure>
@@ -348,9 +338,14 @@
 <li>enable 是否开启使用中间件</li>
 <li>match 设置只有符合某些规则的请求才会经过这个中间件</li>
 <li>ignore 设置符合某些规则的请求不经过这个中间件<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">    bodyParser: &#123;</span><br><span class="line">        enable: fasle   &#x2F;&#x2F; 不开启使用 bodyParser 中间件</span><br><span class="line">    &#125;,</span><br><span class="line">    gzip: &#123;</span><br><span class="line">        match: &#39;&#x2F;static&#39;   &#x2F;&#x2F; 只压缩 &#x2F;static 目录下的文件</span><br><span class="line">    &#125;,</span><br><span class="line">    apiAgent: &#123;</span><br><span class="line">        ignore: &#x2F;^\&#x2F;api&#x2F;   &#x2F;&#x2F; 只用 &#x2F;api 的请求路径才不会使用  apiAgent 中间件</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h4 id="1-5、路由"><a href="#1-5、路由" class="headerlink" title="1.5、路由"></a>1.5、路由</h4>Router 主要用来描述请求 URL 和具体承担执行动作的 Controller 的对应关系， 框架约定了 app/router.js 文件用于统一所有路由规则,<br>通过统一的配置，我们可以避免路由规则逻辑散落在多个地方，从而出现未知的冲突，集中在一起我们可以更方便的来查看全局的路由规则。<br>router 提供的访问方法</li>
+
+
+</li>
 </ul>
 </li>
+</ul>
+<h4 id="1-5、路由"><a href="#1-5、路由" class="headerlink" title="1.5、路由"></a>1.5、路由</h4><p>Router 主要用来描述请求 URL 和具体承担执行动作的 Controller 的对应关系， 框架约定了 app/router.js 文件用于统一所有路由规则,<br>通过统一的配置，我们可以避免路由规则逻辑散落在多个地方，从而出现未知的冲突，集中在一起我们可以更方便的来查看全局的路由规则。<br>router 提供的访问方法</p>
+<ul>
 <li><h4 id="1-5-1、-如何定义-Router"><a href="#1-5-1、-如何定义-Router" class="headerlink" title="1.5.1、 如何定义 Router"></a>1.5.1、 如何定义 Router</h4><ul>
 <li><code>app/router.js</code> 里面定义 URL 路由规则<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; app&#x2F;router.js</span><br><span class="line"> module.exports &#x3D; app &#x3D;&gt; &#123;</span><br><span class="line">     const &#123; router, controller &#125; &#x3D; app;</span><br><span class="line">     router.get(&#39;&#x2F;user&#x2F;:id&#39;, controller.user.info);</span><br><span class="line"> &#125;;</span><br></pre></td></tr></table></figure></li>
 <li><code>app/controller</code> 目录下面实现 <code>Controller</code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; app&#x2F;controller&#x2F;user.js</span><br><span class="line"> class UserController extends Controller &#123;</span><br><span class="line">     async info() &#123;</span><br><span class="line">         const &#123; ctx &#125; &#x3D; this;</span><br><span class="line">         ctx.body &#x3D; &#123;</span><br><span class="line">         name: &#96;hello $&#123;ctx.params.id&#125;&#96;,</span><br><span class="line">         &#125;;</span><br><span class="line">     &#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
@@ -385,7 +380,7 @@
 </li>
 <li><h4 id="1-5-2、-RESTful-风格的-URL-定义"><a href="#1-5-2、-RESTful-风格的-URL-定义" class="headerlink" title="1.5.2、 RESTful 风格的 URL 定义"></a>1.5.2、 RESTful 风格的 URL 定义</h4><p>如果想通过 RESTful 的方式来定义路由， 我们提供了 app.router.resources(‘routerName’, ‘pathMatch’, controller) 快速在一个路径上生成 CRUD 路由结构。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; app&#x2F;router.js</span><br><span class="line">  module.exports &#x3D; app &#x3D;&gt; &#123;</span><br><span class="line">      const &#123; router, controller &#125; &#x3D; app;</span><br><span class="line">      router.resources(&#39;posts&#39;, &#39;&#x2F;api&#x2F;posts&#39;, controller.posts);</span><br><span class="line">      router.resources(&#39;users&#39;, &#39;&#x2F;api&#x2F;v1&#x2F;users&#39;, controller.v1.users); &#x2F;&#x2F; app&#x2F;controller&#x2F;v1&#x2F;users.js</span><br><span class="line">  &#125;;</span><br></pre></td></tr></table></figure>
-<p>上面代码就在<code>/posts</code> 路径上部署了一组 CRUD 路径结构，对应的 Controller 为 <code>app/controller/posts.js</code> 接下来， 你只需要在 <code>posts.js</code> 里面实现对应的函数就可以了。<br> <img src="/public/img/router.png" alt="blockchain"></p>
+<p>上面代码就在<code>/posts</code> 路径上部署了一组 CRUD 路径结构，对应的 Controller 为 <code>app/controller/posts.js</code> 接下来， 你只需要在 <code>posts.js</code> 里面实现对应的函数就可以了。<br> <img src="/img/router.png" alt="blockchain"></p>
 </li>
 </ul>
 
